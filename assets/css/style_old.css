@@ -1,0 +1,45 @@
+@import 'custom-reset.css';
+
+.wrap
+{
+	display:grid;
+	grid-template-areas: "nav nav"
+                   		 "sidebar  content";
+    width:960px;
+    margin:0 auto;
+    grid-template-columns: 250px 1fr;               		 
+}
+
+.wrap .nav
+{
+	grid-area:nav;
+	background: #eee;
+}
+.wrap .nav ul 
+{
+	display:flex;
+	
+}
+.wrap .nav ul li 
+{
+	padding:1em 0;
+}
+.wrap .nav ul li a 
+{
+	padding:1em;
+	transition: 0.3s all;
+}
+.wrap .nav ul li a:hover
+{
+	background: #ccc;
+}
+.wrap .sidebar
+{
+	grid-area:sidebar;
+	background: #dceaec;
+	padding:1em;
+}
+.wrap .content
+{
+	grid-area:content;
+}
