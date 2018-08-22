@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 include 'phpQuery-onefile.php';
 include 'config.php';
+include 'functions.php';
+include 'routing.php';
 
 
 
@@ -102,3 +104,44 @@ function tours_insert()
 	} // tours_insert()
 
 //tours_insert();
+
+
+// заполним табличку route
+// пройдемся по ссылкам source_url из таблицы tour
+
+function route_insert()
+{
+	global $connection;
+	
+	$query = "SELECT id, source_url FROM tour";
+	$res = mysqli_query($connection, $query);
+	while($row = mysqli_fetch_assoc($res))
+	{
+			//echo $row['source_url'].'<br>';
+			//print_arr($row);
+
+		$source_url = file_get_contents($row['source_url']);
+		$document = phpQuery::newDocument($source_url);
+
+		$route_items = $document->find('.tour-card-facilities__route-items')->text();;
+		$route_items_array = explode('—', $route_items);
+		
+		foreach ($route_items_array as $key => $value) {
+			//echo rtrim($value).'<br/>';
+			$value = str_replace(' ','',$value);
+			$value = trim(preg_replace('/\s\s+/', ' ', $value));
+
+			$sql = "INSERT INTO route (tour_id, city) VALUES ('{$row['id']}', '{$value}')";
+
+			if (mysqli_query($connection, $sql)) {
+			    echo "New record created successfully <br />";
+			} else {
+			    echo "Error: " . $sql . "<br>" . mysqli_error($connection).'<br>';
+			}
+		}
+	}
+} //route_insert()
+
+//route_insert();
+
+

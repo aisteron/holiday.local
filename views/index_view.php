@@ -19,13 +19,21 @@
 			<div class="wrapselect">
 			<select name="" id="">
 				<option value="minsk">Минск</option>
-				<option value="minsk">Несвиж</option>
-				<option value="minsk">Мир</option>
+				<option value="nesvizh">Несвиж</option>
+				<option value="mir">Мир</option>
 			</select>
 			</div>
 		</div>
 		<div class="content">
-			<?php print_arr($exc_list); ?>
+			<ul>
+			<?php 
+
+			foreach ($exc_list as $key => $value) {
+				echo '<li>'.$key.'. '.$value.'</li>';
+			}
+
+			 ?>
+			</ul>
 		</div>
 	</div>	
 </body>
