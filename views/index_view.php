@@ -8,12 +8,22 @@
 </head>
 <body>
 	<div class="wrap">
+		<div class='bg'></div>
 		<div class="nav">
 			<ul>
-				<li><a href="#">Главная</a></li>
-				<li><a href="#">О нас</a></li>
-				<li><a href="#">Контакты</a></li>
-				<li><a href="#">Еще</a></li>
+				<li><a href="#">Экскурсии</a></li>
+				<li><a href="#">Обо мне</a></li>
+				<li><a href="#">Туры</a></li>
+				<li><a href="#">Достопримечательности</a></li>
+				<li><a href="#">Блог</a></li>
+				<li>
+					<select name="" id="">
+						<option value="BYN">BYN</option>
+						<option value="USD">USD</option>
+						<option value="EUR">EUR</option>
+						<option value="RUB">RUB</option>
+					</select>
+				</li>
 			</ul>
 		</div>
 		<div class="sidebar">
@@ -37,6 +47,6 @@
 			</ul>
 		</div>
 	</div>
-	<script src='/assets/js/custom.js'></script>	
+	<script src='/assets/js/custom.js' defer async></script>	
 </body>
 </html>
