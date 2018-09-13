@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>index_view</title>
 	<link rel="stylesheet" href="/assets/css/style.css">
+
 </head>
 <body>
 	<div class="wrap">
@@ -35,6 +36,7 @@
 			 ?>
 			</ul>
 		</div>
-	</div>	
+	</div>
+	<script src='/assets/js/custom.js'></script>	
 </body>
 </html>
