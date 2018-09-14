@@ -7,17 +7,21 @@ $url = $_SERVER['REQUEST_URI'];
 
 $routes = array(
 	array('url' => '#\/$|\?#', 'view' => 'index'),
-	array('url' => '#product/(?P<product_alias>[a-z0-9-]+)#i', 'view' => 'product'),
+	array('url' => '#tour/(?P<tour_alias>[a-z0-9-]+)#i', 'view' => 'tour'),
 	array('url' => '#category/(?P<id>\d+)#', 'view' => 'category'),
 	
 );
+
+
 foreach ($routes as $route) {
+
 	if(preg_match($route['url'], $url, $match))
 	{
 		$view = $route['view'];
 		break;
 	}
 }
+
 if(empty($match))
 {
 	include 'views/404.php';

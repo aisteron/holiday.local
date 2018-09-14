@@ -1,4 +1,4 @@
-var select = document.querySelector('.wrapselect select');
+var select = document.querySelector('.select-container select');
 
 select.addEventListener('change', function(){
 

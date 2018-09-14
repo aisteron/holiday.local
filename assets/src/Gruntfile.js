@@ -13,12 +13,12 @@ module.exports = function(grunt){
 				    {
 					  
 					  paths: ['/src'],
-						//sourceMap:true,
-				      plugins: // временно отлючаю плагины, т.к. sourcemap не работает с ними.
+						sourceMap:true,
+				      /*plugins: // временно отлючаю плагины, т.к. sourcemap не работает с ними.
 				      	[
 				        new (require('less-plugin-autoprefix'))({browsers: ["last 3 versions"]}),
 				        new (require('less-plugin-clean-css'))()
-				        ],
+				        ],*/
 				    },
 			    files: 
 				    {

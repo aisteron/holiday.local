@@ -1,16 +1,13 @@
 <?php 
 include '/templates/header.php';
 include '/templates/sidebar.php';
-//include '/templates/bread.php';
 ?>
 
 		<div class="content">
 			<ul>
 				<?php 
 
-				foreach ($exc_list as $key => $value) {
-					echo '<li><a href="/tour/'.$key.'">'.$value.'</a></li>';
-				}
+				print_arr($tour);
 
 				 ?>
 			</ul>

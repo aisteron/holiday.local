@@ -1,1 +1,148 @@
-@import 'custom-reset.css';.wrap{display:grid;grid-template-areas:"bg bg" "nav nav" "sidebar  content";max-width:960px;margin:0 auto;grid-template-columns:250px 710px}.wrap .bg{grid-area:bg;background-image:url(../img/bg.jpg);width:100%;height:250px}.wrap .nav{grid-area:nav;background:#eee}.wrap .nav ul{display:-webkit-box;display:-ms-flexbox;display:flex}.wrap .nav ul li{padding:1em 0}.wrap .nav ul li a{padding:1em;-webkit-transition:.3s all;-o-transition:.3s all;transition:.3s all}.wrap .nav ul li a:hover{background:#ccc}.wrap .sidebar{grid-area:sidebar;background:#dceaec;padding:1em}.wrap .sidebar div.wrapselect{position:relative;height:28px;border-radius:5px;border:1px solid #adcdd2}.wrap .sidebar div.wrapselect:hover{background:#d5e6e8}.wrap .sidebar div.wrapselect:before{content:'';position:absolute;right:6px;top:12px;border:6px solid;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:2px solid transparent;color:#84a8ad}.wrap .sidebar select{position:relative;z-index:2;display:block;width:100%;height:100%;padding:0 10px;border:none;background-color:transparent;cursor:pointer;color:#196a75}.wrap .content{grid-area:content}
+@import 'custom-reset.css';
+.wrap {
+  display: grid;
+  grid-template-areas: "bg bg" "nav nav" ". bread" "sidebar  content";
+  max-width: 960px;
+  margin: 0 auto;
+  grid-template-columns: 250px 710px;
+}
+.wrap .bg {
+  grid-area: bg;
+  background-image: url(../img/bg.jpg);
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+.wrap .bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #8eabaf;
+  opacity: 0.6;
+}
+.wrap .bg h1 {
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  top: 100px;
+}
+.wrap .bg .logo-cont {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+}
+.wrap .bg .logo-cont img {
+  width: 55px;
+  align-self: self-start;
+  padding-right: 1em;
+}
+.wrap .bg .logo-cont span {
+  font-family: sans-serif;
+  font-weight: bold;
+  align-self: center;
+}
+.wrap .bg .logo-cont span .slogan {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.9em;
+  display: inline-block;
+  margin-top: 0.3em;
+}
+.wrap .nav {
+  grid-area: nav;
+  background: #eee;
+}
+.wrap .nav ul {
+  display: flex;
+}
+.wrap .nav ul li {
+  padding: 1em 0;
+}
+.wrap .nav ul li a {
+  padding: 1em;
+  transition: 0.3s all;
+}
+.wrap .nav ul li a:hover {
+  background: #ccc;
+}
+.wrap .nav ul li.select-container {
+  margin-left: auto;
+  padding: 0;
+  position: relative;
+  /*margin-right: 1em;*/
+}
+.wrap .nav ul li.select-container .wrap-select:before {
+  content: '';
+  position: absolute;
+  right: 13px;
+  top: 21px;
+  border: 6px solid;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 2px solid transparent;
+  color: #7d7d7d;
+}
+.wrap .nav ul li.select-container select {
+  padding: 1em;
+  padding-right: 2em;
+}
+.wrap .nav ul li.select-container select:hover {
+  background: #ccc;
+}
+.wrap .bread {
+  height: 30px;
+  grid-area: bread;
+  background: green;
+}
+.wrap .sidebar {
+  grid-area: sidebar;
+  background: #dceaec;
+  padding: 1em;
+}
+.wrap .sidebar div.wrapselect {
+  position: relative;
+  height: 28px;
+  border-radius: 5px;
+  border: 1px solid #adcdd2;
+}
+.wrap .sidebar div.wrapselect:hover {
+  background: #d5e6e8;
+}
+.wrap .sidebar div.wrapselect:before {
+  content: '';
+  position: absolute;
+  right: 6px;
+  top: 12px;
+  border: 6px solid;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 2px solid transparent;
+  color: #84a8ad;
+}
+.wrap .sidebar select {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #196a75;
+}
+.wrap .content {
+  grid-area: content;
+  padding: 1em;
+}
+.wrap .content ul li {
+  line-height: 1.27;
+}
+/*# sourceMappingURL=../css/style.css.map */
